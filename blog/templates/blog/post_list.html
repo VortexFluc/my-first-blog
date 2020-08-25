@@ -12,13 +12,12 @@
     <div>
         <h2><a href="">Теперь сайт доступен для всех!!!</a></h2>
     </div>
-
-    <div>
-        <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi incidunt laudantium magni sequi, soluta
-            tempora voluptatum. Ab dignissimos, eos fugiat ipsum iste itaque nam non perferendis, quasi, reiciendis soluta
-            voluptatem.
-        </p>
-    </div>
+    {% for post in posts %}
+        <div>
+            <p>published: {{ post.published_date }}</p>
+            <h1><a href="">{{ post.title }}</a></h1>
+            <p>{{ post.text|linebreaksbr }}</p>
+        </div>
+    {% endfor %}
 </body>
 </html>
